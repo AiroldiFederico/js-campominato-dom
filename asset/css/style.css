@@ -1,0 +1,185 @@
+
+/* PROPRIETA CORPO DOM */
+body {
+    font-family: 'Rubik', sans-serif !important; font-weight: bold !important;
+    word-spacing: 2px;
+    height: 100vh !important;
+    background-color: var(--color-5);
+}
+
+/* PALETTE COLORI */
+:root {
+    --color-1: #617C8C;
+    --color-2: #B6E1F2;
+    --color-3: #A63737;
+    --color-4: #e8e8e8;
+    --color-5: #262626;
+}
+
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+}
+.glitch{
+    font-size: 41px;
+    color: rgb(255, 255, 255);
+    animation: glitch 750ms infinite;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, .75), -0.025em -.05em 0 rgba(0, 255, 0, .75), 0.025em .05em 0 rgba(0, 0, 255, .75);
+    }
+    .glitch2Bedore{
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5rem;
+    color: white;
+} @keyframes glitch{
+0%{
+    text-shadow:
+    0.05em 0 0 rgba(255, 0, 0, .75),
+    -0.025em -.05em 0 rgba(0, 255, 0, .75),
+    0.025em .05em 0 rgba(0, 0, 255, .75);
+}
+14%{
+    text-shadow:
+    0.05em 0 0 rgba(255, 0, 0, .75),
+    -0.025em -.05em 0 rgba(0, 255, 0, .75),
+    0.025em .05em 0 rgba(0, 0, 255, .75);
+}
+15%{
+    text-shadow:
+    -0.05em -.025em 0 rgba(255, 0, 0, .75),
+    0.025em 0.025em 0 rgba(0, 255, 0, .75),
+    -0.05em -.05em 0 rgba(0, 0, 255, .75);
+}
+49%{
+    text-shadow:
+    -0.05em -.025em 0 rgba(255, 0, 0, .75),
+    0.025em 0.025em 0 rgba(0, 255, 0, .75),
+    -0.05em -.05em 0 rgba(0, 0, 255, .75);
+}
+50%{
+    text-shadow:
+    0.025em 0.05em 0 rgba(255, 0, 0, .75),
+    0.05em 0 0 rgba(0, 255, 0, .75),
+    0 -0.05em 0 rgba(0, 0, 255, .75);
+}
+99%{
+    text-shadow:
+    0.025em 0.05em 0 rgba(255, 0, 0, .75),
+    0.05em 0 0 rgba(0, 255, 0, .75),
+    0 -0.05em 0 rgba(0, 0, 255, .75);
+}
+100%{
+    text-shadow:
+    -0.025em 0 0 rgba(255, 0, 0, .75),
+    -0.025em -0.025em 0 rgba(0, 255, 0, .75),
+    -0.025em -0.05em 0 rgba(0, 0, 255, .75);
+}
+}
+.containerGlitch{
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1175px;
+    height: auto;
+}
+
+
+.btn{
+    font-family:  'Rubik', sans-serif !important; font-weight: bold !important;
+    font-weight: 800;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(178deg, #0066CC 0%, #2a9d8f 100%);
+    padding: 10px 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 50px;
+    transition : 3000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    transition : 3000ms;
+    padding: 10px 42px;
+    transform : translateY(-18px);
+    background: linear-gradient(178deg, #0066CC 0%, #2a9d8f 100%);
+    color: var(--color-2);
+    border: none;
+}
+
+
+
+
+.grid {
+    /* border: 1px solid black; */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    background-color: var(--color-1);
+    font-size: 1rem;
+    margin-top: 5rem;
+    box-shadow: 4px 12px 13px 0px #141414;
+    max-width: 30%;
+}
+
+:root {
+    --difficult: 10 
+}
+
+.box {
+    border: 1px solid black;
+    width: calc(100% / var(--difficult));
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: var(--color-3);
+}
+
+.w-5 {
+    width: 5%;
+}
+
+.select {
+    font-family:  'Rubik', sans-serif !important; font-weight: bold !important;
+    font-weight: 800;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(178deg, #fe0000 0%, #2a9d9000 100%);
+    padding: 10px 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 50px;
+    width: 10rem;
+    margin-top: 2rem;
+}
+
+.option {
+    color: var(--color-5);
+}
+
+.option:hover {
+    background-color: none !important;
+}
+
+.form-select {
+    padding-left: 2.7rem;
+}
