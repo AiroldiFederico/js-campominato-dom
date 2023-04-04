@@ -82,6 +82,7 @@ function campoMinato() {
 
                 if (nBomb.includes(numberead)) {
                     this.classList.add('red');
+                    grid.innerHTML = "";
                 } else {
                     this.classList.add('blue');
                 }
