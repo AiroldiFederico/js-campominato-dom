@@ -90,6 +90,13 @@ function campoMinato() {
     } else if (difficoltà == 49) {
         document.documentElement.style.setProperty("--difficult", "7");
     }
-}
 
+    //generazione di 16 numeri casuali in un array
+    let nBomb = [];
+    for (let i = 1; i < 16; i++) {
+      nBomb.push(Math.floor(Math.random() * difficoltà));
+    }
+
+    console.log(nBomb)
+}
 
