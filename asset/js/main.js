@@ -75,8 +75,6 @@ function campoMinato() {
                 
                 //click sull'oggetto aggiunge la classe
                 //this.classList.toggle('red')
-                punteggio++;
-                document.getElementById('punteggio').innerHTML = punteggio;
                 
                 console.log(this.innerText);
                 
@@ -90,6 +88,8 @@ function campoMinato() {
                     grid.innerHTML = "";
                 } else {
                     this.classList.add('blue');
+                    punteggio++;
+                    document.getElementById('punteggio').innerHTML = punteggio;
                     
                 }
                 console.log(nBomb, "ciao");
@@ -113,11 +113,34 @@ function campoMinato() {
     }
 
     //generazione di 16 numeri casuali in un array
-    let nBomb = [];
-    for (let i = 1; i < 16; i++) {
-    nBomb.push(Math.floor(Math.random() * difficoltà));
-    };
+    // let nBomb = [];
+    // for (let i = 1; i < 16; i++) {
+    //     nBomb.push(Math.floor(Math.random() * difficoltà));
+    // };
 
-    console.log(nBomb);
+
+
+    // Definiamo la funzione per generare un numero casuale all'interno di un range
+    function generaNumeroCasuale(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      
+      // Definiamo il range di numeri che vogliamo generare
+      const min = 1;
+      const max = difficoltà;
+      
+      // Inizializziamo un array vuoto
+      let nBomb = [];
+      
+      // Generiamo 16 numeri casuali, senza ripetizioni
+      while (nBomb.length < 16) {
+        const numeroCasuale = generaNumeroCasuale(min, max);
+        if (!nBomb.includes(numeroCasuale)) {
+          nBomb.push(numeroCasuale);
+        }
+      }
+      
+      console.log(nBomb);
 }
 
+  
