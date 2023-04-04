@@ -153,6 +153,9 @@ h1 {
 .red {
     background-color: var(--color-3);
 }
+.blue {
+    background-color: var(--color-2);
+}
 
 .w-5 {
     width: 5%;

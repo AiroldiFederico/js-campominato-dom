@@ -34,26 +34,6 @@ function createElementHTML( tagHTML, classi, text) {
 }
 
 
-//ciclo di creazione
-function createGrid(nCelle){
-    for (let i = 1; i <= nCelle; i++) {
-
-        //assegno la funzione con i parametri che mi servono ad una variabile
-        const functionBox = createElementHTML("div", "box", i);
-
-        //quadrati al click
-        functionBox.addEventListener('click', function(){
-
-            //click sull'oggetto aggiunge la classe
-            this.classList.toggle('red')
-            console.log(this.innerText)
-        })
-
-
-        //creiamo i div nella grid
-        grid.append(functionBox);
-    }
-}
 
 
 
@@ -81,7 +61,41 @@ function campoMinato() {
     let difficoltà = parseInt(selectDiff.value);
 
     
+    //ciclo di creazione
+    function createGrid(nCelle){
+        for (let i = 1; i <= nCelle; i++) {
+
+            //assegno la funzione con i parametri che mi servono ad una variabile
+            const functionBox = createElementHTML("div", "box", i);
+
+            //quadrati al click
+            functionBox.addEventListener('click', function(){
+
+                //click sull'oggetto aggiunge la classe
+                //this.classList.toggle('red')
+
+                console.log(this.innerText);
+
+                let numberead = parseInt(this.innerText);
+
+                console.log(numberead);
+
+                if (nBomb.includes(numberead)) {
+                    this.classList.add('red');
+                } else {
+                    this.classList.add('blue');
+                }
+                console.log(nBomb, "ciao");
+            })
+
+
+            //creiamo i div nella grid
+            grid.append(functionBox);
+        }
+    }
+
     createGrid(difficoltà);
+
 
     if (difficoltà == 100) {
         document.documentElement.style.setProperty("--difficult", "10");
@@ -94,9 +108,9 @@ function campoMinato() {
     //generazione di 16 numeri casuali in un array
     let nBomb = [];
     for (let i = 1; i < 16; i++) {
-      nBomb.push(Math.floor(Math.random() * difficoltà));
-    }
+    nBomb.push(Math.floor(Math.random() * difficoltà));
+    };
 
-    console.log(nBomb)
+    console.log(nBomb);
 }
 
