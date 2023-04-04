@@ -60,6 +60,7 @@ function campoMinato() {
     //valore numerico della difficoltà
     let difficoltà = parseInt(selectDiff.value);
 
+    let punteggio = 0;
     
     //ciclo di creazione
     function createGrid(nCelle){
@@ -68,23 +69,28 @@ function campoMinato() {
             //assegno la funzione con i parametri che mi servono ad una variabile
             const functionBox = createElementHTML("div", "box", i);
 
+            
             //quadrati al click
             functionBox.addEventListener('click', function(){
-
+                
                 //click sull'oggetto aggiunge la classe
                 //this.classList.toggle('red')
-
+                punteggio++;
+                document.getElementById('punteggio').innerHTML = punteggio;
+                
                 console.log(this.innerText);
-
+                
                 let numberead = parseInt(this.innerText);
-
+                
                 console.log(numberead);
-
+                
                 if (nBomb.includes(numberead)) {
                     this.classList.add('red');
+                    punteggio = 0;
                     grid.innerHTML = "";
                 } else {
                     this.classList.add('blue');
+                    
                 }
                 console.log(nBomb, "ciao");
             })

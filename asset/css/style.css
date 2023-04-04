@@ -130,7 +130,7 @@ h1 {
     flex-wrap: wrap !important;
     background-color: var(--color-1);
     font-size: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     box-shadow: 4px 12px 13px 0px #141414;
     max-width: 30%;
 }
@@ -172,7 +172,7 @@ h1 {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 50px;
     width: 10rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .option {
@@ -184,5 +184,11 @@ h1 {
 }
 
 .form-select {
-    padding-left: 2.7rem;
+    text-align: center;
+}
+
+.punteggio {
+    color: var(--color-2);
+    margin-top: 1rem;
+    
 }
